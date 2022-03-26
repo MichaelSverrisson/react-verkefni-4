@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Events } from "../components/events";
+import { Events } from "../../components/events";
 
 export const EventsPage = (props) => {
     let { id } = useParams();

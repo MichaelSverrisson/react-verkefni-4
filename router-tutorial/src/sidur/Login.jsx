@@ -1,4 +1,4 @@
-import { Login } from "../components/Login";
+import { Login } from "../../components/Login";
 export const LoginPage = (props) => {
     console.log(props.logginOut)
     if (props.logginOut){

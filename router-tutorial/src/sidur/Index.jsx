@@ -1,4 +1,4 @@
-import {EventListi} from "../components/events";
+import {EventListi} from "../../components/events";
 
 export function Index(){
     return (
