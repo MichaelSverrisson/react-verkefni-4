@@ -1,4 +1,42 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { formButton } from "./FormButton";
+
+export const Login = (props) => {
+    const [error, setError] = useState(null);
+    if(error){
+        return <p>Villa: {error}</p>
+    }
+    return (
+        <section>
+            <form onSubmit={(event) => {
+                event.preventDefault()
+                props.updLog(true)
+                props.updNam(event.target.username.value)
+            }}>
+                <fieldset>
+                    <legend>Notendanafn</legend>
+                    <input type="text" id="username" name="username" />
+                </fieldset>
+                <fieldset>
+                    <legend>Lykilorð</legend>
+                    <input type="password" name="password" id="password" />
+                </fieldset>
+                <div className={s.login__button}>
+                    <formButton text='Innskrá' />
+                    <formButton text='Nýr aðgangur' />
+                </div>
+            </form>
+            <div>
+                <Link className={s.login__link} to="/">
+                    Til baka
+                </Link>
+            </div>
+        </section>
+    );
+}
+
+/*import React, { useState } from 'react';
 import ProTypes from 'prop-types';
 
 
